@@ -1740,7 +1740,7 @@ void EditorInspectorSection::_notification(int p_what) {
 
 		case NOTIFICATION_MOUSE_ENTER: {
 			if (dropping_for_unfold) {
-				dropping_unfold_timer->start();
+				dropping_unfold_timer->start(EDITOR_GET("interface/editor/dragging_unfold_wait_seconds"));
 			}
 			queue_redraw();
 		} break;
